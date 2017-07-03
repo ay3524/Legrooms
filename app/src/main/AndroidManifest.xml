@@ -48,6 +48,7 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ay3524.com.MainActivity" />
+
         </activity>
     </application>
 

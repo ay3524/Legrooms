@@ -92,8 +92,12 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         dialogBuilder.setView(dialogView);
         TextView title = (TextView) dialogView.findViewById(R.id.title);
         TextView description = (TextView) dialogView.findViewById(R.id.desc);
+        TextView address = (TextView) dialogView.findViewById(R.id.address);
+        TextView email = (TextView) dialogView.findViewById(R.id.email);
         title.setText(mapMarkerInfo.getlTitle());
         description.setText(mapMarkerInfo.getDesc());
+        address.setText(mapMarkerInfo.getAddress());
+        email.setText(mapMarkerInfo.getEmail());
         AlertDialog b = dialogBuilder.create();
         b.show();
     }
@@ -154,17 +158,13 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 String latitude = jsonObject.getString("latitude");
 
                 MapMarkerInfo mapMarkerInfo = new MapMarkerInfo();
-                mapMarkerInfo.setPrice(jsonObject.getString("price"));
+                //mapMarkerInfo.setPrice(jsonObject.getString("price"));
                 mapMarkerInfo.setlRules(jsonObject.getString("lRules"));
                 mapMarkerInfo.setDesc(jsonObject.getString("desc"));
                 mapMarkerInfo.setlTitle(lTitle);
                 mapMarkerInfo.setLongitude(longitude);
                 mapMarkerInfo.setLatitude(latitude);
                 mapMarkerInfo.setAddress(jsonObject.getString("address"));
-                mapMarkerInfo.setNeighborhood(jsonObject.getString("neighborhood"));
-                mapMarkerInfo.setCity(jsonObject.getString("city"));
-                mapMarkerInfo.setState(jsonObject.getString("state"));
-                mapMarkerInfo.setCity(jsonObject.getString("country"));
                 mapMarkerInfo.setEmail(jsonObject.getString("email"));
 
                 setMarkerOnMap(latitude, longitude, mMap, lTitle);
