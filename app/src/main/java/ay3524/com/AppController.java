@@ -1,4 +1,4 @@
-package ay3524.com.legrooms;
+package ay3524.com;
 
 import android.app.Application;
 import android.text.TextUtils;

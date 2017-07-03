@@ -7,4 +7,5 @@
     <string name="sign_in">SIGN IN</string>
     <string name="password">Password</string>
     <string name="username">Username</string>
+    <string name="title_activity_maps">Spaces On Map</string>
 </resources>

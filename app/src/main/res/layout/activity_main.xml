@@ -1,25 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ay3524.com.legrooms.MainActivity">
+    android:background="@drawable/bg">
 
-    <android.support.design.widget.AppBarLayout
+    <RelativeLayout
+        android:id="@+id/relative_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="wrap_content">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/logo" />
 
-    </android.support.design.widget.AppBarLayout>
+        <ImageView
+            android:id="@+id/legrooms_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logo"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/legrooms_title" />
 
-    <include layout="@layout/content_main" />
+        <EditText
+            android:textColor="@android:color/white"
+            android:id="@+id/username"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/legrooms_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/username_logo"
+            android:drawablePadding="15dp"
+            android:hint="@string/username"
+            android:textColorHint="@android:color/white" />
 
-</android.support.design.widget.CoordinatorLayout>
+        <EditText
+            android:textColor="@android:color/white"
+            android:id="@+id/password"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/username"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/pass_logo"
+            android:drawablePadding="15dp"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textColorHint="@android:color/white" />
+
+        <Button
+            android:id="@+id/sign_in"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/password"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/sign_in_button_bg"
+            android:text="@string/sign_in"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/forget_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sign_in"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="@string/forget_password"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/forget_pass"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="130dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:background="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/or"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="130dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:background="@android:color/white" />
+        </LinearLayout>
+
+        <Button
+            android:textAllCaps="false"
+            android:id="@+id/fb"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/linear"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/fb_button_bg"
+            android:drawableLeft="@drawable/fb_logo"
+            android:text="@string/connect_with_facebook"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+</ScrollView>
